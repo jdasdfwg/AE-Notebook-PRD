@@ -1,0 +1,113 @@
+---
+
+## 🗂️ Data Model
+
+All data is user-specific and tied to their Supabase `user_id`.
+
+### 1. Users
+| Field        | Type     | Description                     |
+|--------------|----------|---------------------------------|
+| id           | UUID     | Supabase user ID (primary key)  |
+| email        | String   | User email                      |
+| created_at   | DateTime | Signup timestamp                |
+
+---
+
+### 2. Notebooks
+| Field        | Type     | Description                     |
+|--------------|----------|---------------------------------|
+| id           | UUID     | Primary key                     |
+| user_id      | UUID     | Foreign key → Users.id          |
+| title        | String   | Notebook title (editable)       |
+| created_at   | DateTime | Timestamp created               |
+
+---
+
+### 3. Quarters
+| Field        | Type     | Description                     |
+|--------------|----------|---------------------------------|
+| id           | UUID     | Primary key                     |
+| notebook_id  | UUID     | Foreign key → Notebooks.id      |
+| title        | String   | e.g., "Q3 2025"                 |
+| created_at   | DateTime | Timestamp created               |
+
+---
+
+### 4. Weeks
+| Field        | Type     | Description                     |
+|--------------|----------|---------------------------------|
+| id           | UUID     | Primary key                     |
+| quarter_id   | UUID     | Foreign key → Quarters.id       |
+| title        | String   | e.g., "Week 2: July 14–20"      |
+| start_date   | Date     | First day of week               |
+| created_at   | DateTime | Timestamp created               |
+
+---
+
+### 5. Days
+| Field        | Type     | Description                     |
+|--------------|----------|---------------------------------|
+| id           | UUID     | Primary key                     |
+| week_id      | UUID     | Foreign key → Weeks.id          |
+| date         | Date     | Unique per day (e.g., 2025-07-17)|
+| created_at   | DateTime | Timestamp created               |
+
+---
+
+### 6. Quota Categories
+| Field        | Type     | Description                     |
+|--------------|----------|---------------------------------|
+| id           | UUID     | Primary key                     |
+| day_id       | UUID     | Foreign key → Days.id           |
+| category     | String   | e.g., "Hardware"                |
+| target       | Number   | Target amount                   |
+| attainment   | Number   | Current attainment              |
+
+---
+
+### 7. Weekly Target Accounts
+| Field        | Type     | Description                     |
+|--------------|----------|---------------------------------|
+| id           | UUID     | Primary key                     |
+| week_id      | UUID     | Foreign key → Weeks.id          |
+| name         | String   | Account name                    |
+| is_checked   | Boolean  | Whether it's completed          |
+| created_at   | DateTime | Timestamp created               |
+
+---
+
+### 8. Morning Tasks & To-Do Items
+| Field        | Type     | Description                     |
+|--------------|----------|---------------------------------|
+| id           | UUID     | Primary key                     |
+| day_id       | UUID     | Foreign key → Days.id           |
+| list_type    | String   | "morning_task" or "todo"        |
+| content      | String   | Task text                       |
+| is_checked   | Boolean  | Whether it’s complete           |
+| parent_id    | UUID     | Null or → this table.id (for subtasks) |
+| created_at   | DateTime | Timestamp created               |
+
+---
+
+### 9. Meeting Notes
+| Field        | Type     | Description                     |
+|--------------|----------|---------------------------------|
+| id           | UUID     | Primary key                     |
+| day_id       | UUID     | Foreign key → Days.id           |
+| title        | String   | Meeting title                   |
+| category     | String   | e.g., "Demo", "Follow-Up"       |
+| content      | Text     | Rich text + image + bullets     |
+| created_at   | DateTime | Timestamp created               |
+
+---
+
+## 🔐 Relationships Summary
+- A **User** has many **Notebooks**
+- A **Notebook** has many **Quarters**
+- A **Quarter** has many **Weeks**
+- A **Week** has many **Days** and **Target Accounts**
+- A **Day** has many:
+  - **Quota Categories**
+  - **Morning Tasks**
+  - **To-Do Items**
+  - **Meeting Notes**
