@@ -1,0 +1,90 @@
+# 📋 AE’s Notebook – Product Backlog
+
+All user stories follow the format:  
+**As a [user type], I want [function] so that [goal].**
+
+---
+
+## 🧱 EPIC 1: User Authentication & Access
+
+### ✅ User Stories
+- **[ ]** As a user, I want to create an account with email + password so that my data can be saved to the cloud.
+- **[ ]** As a user, I want to log in securely so I can access my notebook from any device.
+- **[ ]** As a user, I want a "Continue as Guest" option so I can test the app without signing up.
+- **[ ]** As a user, I want to receive a one-time code to reset my password if I forget it.
+- **[ ]** As a guest, I want to be reminded that my data won't be saved unless I create an account.
+
+---
+
+## 📓 EPIC 2: Notebook, Quarters, Weeks, and Days
+
+### ✅ User Stories
+- **[ ]** As a user, I want to create multiple notebooks with editable names so I can separate my workflows.
+- **[ ]** As a user, I want the default notebook to be titled "The AE’s Notebook" and protected from deletion.
+- **[ ]** As a user, I want to add new quarters, weeks, and days so I can organize my time chronologically.
+- **[ ]** As a user, I want the current date to auto-populate when a new day is created.
+- **[ ]** As a user, I want sidebar navigation so I can quickly move between notebooks and time blocks.
+
+---
+
+## 🎯 EPIC 3: Quota Tracking
+
+### ✅ User Stories
+- **[ ]** As a user, I want to create quota categories with target and attainment amounts so I can track performance.
+- **[ ]** As a user, I want to type a category name and press Enter to add it, without clicking “+ Add”.
+- **[ ]** As a user, I want the quota section to be collapsible so I can focus on what matters.
+- **[ ]** As a user, I want quota totals to be hidden when the section is collapsed.
+
+---
+
+## 📌 EPIC 4: Weekly Target Accounts, Morning Tasks, and To-Do List
+
+### ✅ User Stories
+- **[ ]** As a user, I want to add items by typing and pressing Enter or clicking “+ Add” (like category flow).
+- **[ ]** As a user, I want to press Tab to indent sub-bullets as subtasks under a checkbox list.
+- **[ ]** As a user, I want my tasks to only live on the day they’re created, like meeting notes.
+- **[ ]** As a user, I want an intuitive text editing bar to format tasks (checkbox, bullets, undo/redo).
+- **[ ]** As a user, I want to remove counters like “0 of 1 tasks” and delete icons for a cleaner view.
+
+---
+
+## 📝 EPIC 5: Meeting Notes
+
+### ✅ User Stories
+- **[ ]** As a user, I want to create notes that are assigned to the current day by default.
+- **[ ]** As a user, I want to reassign meeting notes to a different day if needed.
+- **[ ]** As a user, I want the notes field to auto-open when I switch to the Meeting Notes view.
+- **[ ]** As a user, I want to copy any note’s full content (title, date, category, text) with one click.
+- **[ ]** As a user, I want to upload or paste images directly into any meeting note.
+- **[ ]** As a user, I want the default meeting note category to be “General Note”.
+
+---
+
+## 🧠 EPIC 6: AI Chat Integration (Future Phase)
+
+### ✅ User Stories
+- **[ ]** As a user, I want to ask a chatbot questions about my quota, tasks, and notes so I can save time.
+- **[ ]** As a user, I want the chatbot to summarize my week or meetings on demand.
+
+---
+
+## 🚀 EPIC 7: Deployment & Sharing
+
+### ✅ User Stories
+- **[ ]** As a user, I want the app to be hosted on Netlify or Vercel with a public shareable link.
+- **[ ]** As a developer, I want the codebase pushed to GitHub for version control.
+- **[ ]** As a user, I want to export my notes for backup via email, clipboard, or .txt/.doc format.
+
+---
+
+## 🔄 EPIC 8: UI/UX Improvements
+
+### ✅ User Stories
+- **[ ]** As a user, I want sidebar navigation to persist between views for context retention.
+- **[ ]** As a user, I want smooth scrolling, collapsible UI, and responsive design on desktop and mobile.
+- **[ ]** As a user, I want textboxes to behave like OneNote/Word with clean formatting.
+- **[ ]** As a user, I want light and dark mode parity — features should work the same in both.
+
+---
+
+Let me know if you'd like a downloadable `.md` file or want to break this backlog into sprints next!
