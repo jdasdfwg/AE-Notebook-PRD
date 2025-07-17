@@ -1,0 +1,132 @@
+# 📓 Product Requirements Document (PRD): AE’s Notebook
+
+## 📌 Product Name
+**AE’s Notebook** – A productivity and planning tool built for B2B field Account Executives.
+
+---
+
+## 🎯 Purpose
+AE’s Notebook helps enterprise sellers plan their week, track progress against quota, log customer meetings, and manage daily execution — all in one streamlined interface, accessible on both desktop and mobile.
+
+---
+
+## 👤 Target Users
+- Enterprise and SMB B2B sales professionals  
+- Field AEs managing a mix of prospecting, meetings, and quota attainment  
+- RevOps leaders who want lightweight seller tools without bloated CRM systems  
+
+---
+
+## 🧠 Core Features
+
+### 1. Notebook Structure
+- Hierarchy: **Quarter → Week → Day**
+- Sidebar navigation for:
+  - Quarters (e.g., Q3 2025)
+  - Weeks (e.g., Week 2: July 14–20)
+  - Days (e.g., Mon, July 15)
+
+---
+
+### 2. Quota Overview
+- Editable quota categories (e.g., "Hardware", "AI Deals")
+- Fields for:
+  - Quota Target by category
+  - Attainment by category
+- Auto-calculates percent to goal
+- Collapsible UI:
+  - Collapsed state hides totals and "+ Add Category" button
+- Categories added via Enter or "+ Add Category" button
+
+---
+
+### 3. Weekly Target Accounts
+- Add accounts via Enter or "+ Add Account" button
+- Checkbox enabled
+- Supports checkable bullet sub-tasks (via `Tab`)
+- Copy button for exporting
+
+---
+
+### 4. Morning Tasks & To-Do List
+- Daily reset (no carryover between days)
+- Clean text box with checkable bullet per new line
+- `Tab` creates an indented sub-task (also checkable)
+- Rich text toolbar includes:
+  - Indent
+  - Undo/Redo
+  - Checkmark bullet
+  - Regular bullets
+  - Numbered bullets
+- Expands with page (no internal scrolling)
+- No task counters or delete icons shown
+
+---
+
+### 5. Meeting Notes
+- “Meeting Notes View” lists all notes across quarter
+- Each note includes:
+  - Title
+  - Date
+  - Category (default: “General Note”)
+  - Body with rich text + image support
+  - Reassignable to another day
+- Sidebar remains visible in notes view
+- Filter by category dropdown
+- Notes auto-start with the text box open
+- Copy button exports full note
+
+---
+
+## 🔐 Authentication
+
+- **Supabase login**
+  - Email & password
+  - Forgot password via email token
+- **Guest access**
+  - No data persistence
+- All data stored per user login (cloud-synced)
+
+---
+
+## 🧰 Platform & Tech Stack
+
+| Component        | Tech/Service        |
+|------------------|---------------------|
+| Frontend         | React + Tailwind (Replit project) |
+| Backend          | Supabase (auth & DB) |
+| Hosting          | Netlify or Vercel   |
+| State Management | Local + Supabase sync |
+| Version Control  | GitHub              |
+
+---
+
+## ✅ MVP Checklist
+
+| Feature                              | Status        |
+|--------------------------------------|---------------|
+| Sidebar navigation                   | ⬜ Not Started |
+| Quota Overview                       | ⬜ Not Started |
+| Weekly Target Accounts               | ⬜ Not Started |
+| Morning Tasks & To-Do List           | ⬜ Not Started |
+| Meeting Notes                        | ⬜ Not Started |
+| Supabase Login & Guest Access        | ⬜ Not Started |
+| Copy button for Notes + Tasks        | ⬜ Not Started |
+| Mobile/Desktop Responsiveness        | ⬜ Not Started |
+| Netlify Deployment                   | ⬜ Not Started |
+
+---
+
+## 🚀 Future Features (Post-MVP)
+
+- Analytics dashboard (quota pacing, meeting volume)
+- Team leaderboard (manager view)
+- Slack/email export
+- AI assistant for surfacing key notes
+- Global search and tag-based filtering
+
+---
+
+## 📎 File Info
+**Filename:** `PRD.md`  
+**Location:** Root of GitHub Repo or under `/docs` if structured
