@@ -1,0 +1,95 @@
+# 🚀 AE's Notebook – Sprint Plan (Replit)
+
+This sprint plan outlines the phased development of the AE's Notebook using Replit, Supabase, and GitHub. Each sprint is 1 week long.
+
+---
+
+## 🏁 Sprint 0: Environment Setup & Planning
+
+### 🎯 Goal:
+Set up the Replit environment, version control, and authentication backend.
+
+### ✅ Tasks:
+- [ ] Create a new Replit workspace for AE's Notebook.
+- [ ] Connect project to GitHub repo.
+- [ ] Initialize Supabase project.
+- [ ] Design database schema (users, notebooks, days, tasks, notes, etc).
+- [ ] Install Supabase client SDK and test basic auth.
+- [ ] Create basic folder structure for components and services.
+
+---
+
+## 🚧 Sprint 1: MVP Core Features
+
+### 🎯 Goal:
+Build the core layout, authentication, and basic notebook functionality.
+
+### ✅ Tasks:
+- [ ] Implement login, sign up, guest access, and password reset (Supabase auth).
+- [ ] Build sidebar with ability to:
+  - [ ] Add, rename, delete notebooks (except default)
+  - [ ] Add quarters, weeks, and auto-generated days
+- [ ] Auto-select current date or create it on load
+- [ ] Create pages for each view: Notebook View, Meeting Notes View
+- [ ] Quota Overview section:
+  - [ ] Add/Edit/Delete categories
+  - [ ] Press "Enter" to add new categories
+  - [ ] Collapsible quota section with hidden totals when collapsed
+- [ ] Weekly Target Accounts list:
+  - [ ] Add by typing and pressing enter
+  - [ ] Add sub-tasks with checkboxes using Tab
+- [ ] Morning Tasks / To-Do Lists:
+  - [ ] Each day starts blank (no carry-over)
+  - [ ] Add checkable tasks with sub-tasks
+  - [ ] Rich text formatting toolbar
+- [ ] Save all user input to Supabase by account
+
+---
+
+## 🧠 Sprint 2: Notes, UX Polish, and Export
+
+### 🎯 Goal:
+Complete meeting notes, improve UI, and build export tools.
+
+### ✅ Tasks:
+- [ ] Meeting Notes View:
+  - [ ] Notes auto-assign to current date
+  - [ ] Allow reassignment to a different day
+  - [ ] Upload/paste images into notes
+  - [ ] Copy button copies title, date, text, and category
+- [ ] Ensure sidebar remains visible across views
+- [ ] Add collapsible Weekly Target + Morning Tasks/To-Do sections side-by-side
+- [ ] Ensure Tab key creates sub-task checkbox lines
+- [ ] Match behavior across light and dark mode
+- [ ] Add export button to email/copy notes
+- [ ] Ensure responsive layout on mobile and desktop
+
+---
+
+## 🔮 Sprint 3: Optional (AI Assistant & Team Sharing)
+
+### 🎯 Goal:
+Add smart assistant and prepare for user collaboration and paid features.
+
+### ✅ Tasks:
+- [ ] Build AI Assistant:
+  - [ ] Embed GPT chatbot trained on user's data (notes, tasks, quotas)
+  - [ ] Enable queries like “What’s my biggest priority today?”
+- [ ] Create team-sharing (if scoped in)
+- [ ] Add user settings and basic plan info
+- [ ] Stripe integration (for future billing)
+- [ ] Final performance tuning
+
+---
+
+## 📦 Deployment Tasks (across sprints)
+
+- [ ] Connect to GitHub for version control
+- [ ] Deploy to Netlify or Vercel
+- [ ] Set up environment variables for Supabase keys
+- [ ] Test login persistence across devices
+- [ ] Share live link with collaborators
+
+---
+
+Let me know if you want a `.md` download or want to turn this into a public README or project board!
